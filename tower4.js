@@ -15,6 +15,7 @@ var start = false;
 function init () {		
 	$('.difficulty').click(difficultyClick);
 	$('.butt').click(buttClick);
+	$('.reset').click(resetClick); 
 };
 
 function buttClick(event){
@@ -142,5 +143,25 @@ function difficultyClick(event){
 			};
 			start = true; 
 		};
-	}
+	};
+
+	function resetClick(event){
+		var $show0 = $('#T0'); 
+		var $show1 = $('#T1'); 
+		var $show2 = $('#T2'); 
+		display = ''; 
+		stack0 = ''; 
+		stack1 = ''; 
+		stack2 = '';
+		hold = []; 
+		fromStack = [];
+		toStack = [];
+		winLength = 3;
+		next = false; 
+		ready = false;
+		start = false;
+		$show0.text(210); 
+		$show1.text(''); 
+		$show2.text(''); 
+	};
 
